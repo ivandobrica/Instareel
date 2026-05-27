@@ -1,0 +1,14 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.layout__content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 80px;
+}

@@ -1,0 +1,62 @@
+.add-reel {
+  padding: 20px 16px;
+}
+
+.add-reel__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.add-reel__back {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transition: background var(--transition);
+}
+
+.add-reel__back:hover {
+  background: var(--color-surface-hover);
+}
+
+.add-reel__header h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.add-reel__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.add-reel__form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.add-reel__form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a0a0b8' stroke-width='2'%3E%3Cpolyline points='6,9 12,15 18,9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.add-reel__preview {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 9 / 12;
+  max-height: 200px;
+}
+
+.add-reel__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
