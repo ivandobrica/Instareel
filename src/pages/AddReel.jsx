@@ -8,7 +8,7 @@ export default function AddReel() {
   const [categories, setCategories] = useState([]);
   const [url, setUrl] = useState('');
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+
   const [notes, setNotes] = useState('');
   const [categoryId, setCategoryId] = useState('');
   const [thumbnailUrl, setThumbnailUrl] = useState('');
@@ -45,7 +45,6 @@ export default function AddReel() {
       await addReel({
         url: url.trim(),
         title: title.trim() || 'Untitled Reel',
-        author: author.trim(),
         notes: notes.trim(),
         categoryId: categoryId ? Number(categoryId) : null,
         thumbnailUrl: thumbnailUrl.trim(),
@@ -88,16 +87,6 @@ export default function AddReel() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Give it a name..."
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Author</label>
-          <input
-            type="text"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            placeholder="@username"
           />
         </div>
 

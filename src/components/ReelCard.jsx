@@ -25,7 +25,6 @@ export default function ReelCard({ reel }) {
       </div>
       <div className="reel-card__info">
         <h3 className="reel-card__title">{reel.title || 'Untitled Reel'}</h3>
-        {reel.author && <p className="reel-card__author">@{reel.author}</p>}
       </div>
     </div>
   );

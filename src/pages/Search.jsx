@@ -17,7 +17,6 @@ export default function Search() {
     return reels.filter(
       (r) =>
         (r.title && r.title.toLowerCase().includes(q)) ||
-        (r.author && r.author.toLowerCase().includes(q)) ||
         (r.notes && r.notes.toLowerCase().includes(q))
     );
   }, [query, reels]);
@@ -37,7 +36,7 @@ export default function Search() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search by title, author, or notes..."
+          placeholder="Search by title or notes..."
           autoFocus
         />
         {query && (

@@ -44,7 +44,6 @@ export default function ReelDetail() {
     e.preventDefault();
     await updateReel(Number(id), {
       title: editData.title,
-      author: editData.author,
       notes: editData.notes,
       categoryId: editData.categoryId ? Number(editData.categoryId) : null,
       thumbnailUrl: editData.thumbnailUrl,
@@ -107,10 +106,6 @@ export default function ReelDetail() {
       <div className="reel-detail__info">
         <h1 className="reel-detail__title">{reel.title || 'Untitled Reel'}</h1>
 
-        {reel.author && (
-          <p className="reel-detail__author">@{reel.author}</p>
-        )}
-
         {category && (
           <div className="reel-detail__category">
             <span>{category.icon}</span>
@@ -147,14 +142,6 @@ export default function ReelDetail() {
               type="text"
               value={editData.title || ''}
               onChange={(e) => setEditData({ ...editData, title: e.target.value })}
-            />
-          </div>
-          <div className="form-group">
-            <label>Author</label>
-            <input
-              type="text"
-              value={editData.author || ''}
-              onChange={(e) => setEditData({ ...editData, author: e.target.value })}
             />
           </div>
           <div className="form-group">
